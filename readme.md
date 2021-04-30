@@ -1,4 +1,4 @@
-# Janoeo
+# Janoeo (depreacted v6 branch)
 
 <img src="https://raw.githubusercontent.com/AlasDiablo/JANOEO/1.15/textures/desc/logo.png" alt="AkumaCodeBlack" align=right width=128px />
 
