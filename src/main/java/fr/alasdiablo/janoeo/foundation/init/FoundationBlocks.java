@@ -12,25 +12,13 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-/**
- * No-Ore Block Handler
- */
 @SuppressWarnings("unused")
-public class ModBlocks {
+public class FoundationBlocks {
 
-    /**
-     * Instance of Sapphire Block
-     */
     public static Block SAPPHIRE_BLOCK
-            = new Block(
-            Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f).harvestTool(ToolType.PICKAXE))
+            = new Block(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f).harvestTool(ToolType.PICKAXE))
             .setRegistryName(Registries.SAPPHIRE_BLOCK);
-
-    /**
-     * Instance of Ruby Block
-     */
-    public static Block RUBY_BLOCK
-            = new Block(
+    public static Block RUBY_BLOCK = new Block(
             Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(3f).harvestTool(ToolType.PICKAXE))
             .setRegistryName(Registries.RUBY_BLOCK);
 

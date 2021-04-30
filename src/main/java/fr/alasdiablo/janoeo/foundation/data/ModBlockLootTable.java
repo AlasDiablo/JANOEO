@@ -45,8 +45,8 @@ public class ModBlockLootTable extends DioBlockLootTables {
         this.registerDropSelfLootTable(BasaltOresBlocks.IRON_BASALT_ORE);
         this.registerDropSelfLootTable(EndOresBlocks.GOLD_END_ORE);
         this.registerDropSelfLootTable(EndOresBlocks.IRON_END_ORE);
-        this.registerDropSelfLootTable(ModBlocks.RUBY_BLOCK);
-        this.registerDropSelfLootTable(ModBlocks.SAPPHIRE_BLOCK);
+        this.registerDropSelfLootTable(FoundationBlocks.RUBY_BLOCK);
+        this.registerDropSelfLootTable(FoundationBlocks.SAPPHIRE_BLOCK);
         this.registerDropSelfLootTable(NetherOresBlocks.ALUMINIUM_NETHER_ORE);
         this.registerDropSelfLootTable(NetherOresBlocks.COPPER_NETHER_ORE);
         this.registerDropSelfLootTable(NetherOresBlocks.GOLD_NETHER_ORE);

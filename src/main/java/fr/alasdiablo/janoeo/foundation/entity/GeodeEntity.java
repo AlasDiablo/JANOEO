@@ -1,5 +1,6 @@
 package fr.alasdiablo.janoeo.foundation.entity;
 
+import fr.alasdiablo.diolib.util.DateRange;
 import fr.alasdiablo.janoeo.foundation.init.FoundationEntities;
 import fr.alasdiablo.janoeo.foundation.init.FoundationItems;
 import fr.alasdiablo.janoeo.foundation.init.FoundationParticles;
@@ -11,6 +12,7 @@ import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.projectile.ProjectileItemEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.particles.IParticleData;
 import net.minecraft.particles.ItemParticleData;
 import net.minecraft.particles.ParticleTypes;
@@ -62,7 +64,7 @@ public class GeodeEntity extends ProjectileItemEntity {
     protected void onEntityHit(EntityRayTraceResult p_213868_1_) {
         super.onEntityHit(p_213868_1_);
         Entity entity = p_213868_1_.getEntity();
-        entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.func_234616_v_()), 2f);
+        entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getShooter()), 2f);
     }
 
     protected void onImpact(RayTraceResult result) {
@@ -76,14 +78,23 @@ public class GeodeEntity extends ProjectileItemEntity {
 
     private void spawnDrop(World worldIn) {
         Random random = new Random();
-
-        for (int i = 0; i < 3; i++) {
-            Item item = ItemsTags.Gems.GEMS.getRandomElement(random);
-            ItemStack stack = new ItemStack(item);
-            stack.setCount(random.nextInt(3));
-            ItemEntity itementity = new ItemEntity(worldIn, this.getPosX(), this.getPosY(), this.getPosZ(), stack);
-            itementity.setDefaultPickupDelay();
-            worldIn.addEntity(itementity);
+        if (!DateRange.IS_APRIL_FIRST) {
+            for (int i = 0; i < 3; i++) {
+                Item item = ItemsTags.Gems.GEMS.getRandomElement(random);
+                ItemStack stack = new ItemStack(item);
+                stack.setCount(random.nextInt(3));
+                ItemEntity itementity = new ItemEntity(worldIn, this.getPosX(), this.getPosY(), this.getPosZ(), stack);
+                itementity.setDefaultPickupDelay();
+                worldIn.addEntity(itementity);
+            }
+        } else {
+            for (int i = 0; i < 64; i++) {
+                ItemStack stack = new ItemStack(Items.COD);
+                stack.setCount(random.nextInt(4));
+                ItemEntity itementity = new ItemEntity(worldIn, this.getPosX(), this.getPosY(), this.getPosZ(), stack);
+                itementity.setDefaultPickupDelay();
+                worldIn.addEntity(itementity);
+            }
         }
     }
 

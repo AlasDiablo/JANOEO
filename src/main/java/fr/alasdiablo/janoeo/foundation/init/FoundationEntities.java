@@ -12,7 +12,7 @@ public class FoundationEntities {
 
     public static EntityType<GeodeEntity> GEODE_ENTITY =
             EntityType.Builder.<GeodeEntity>create(GeodeEntity::new, EntityClassification.MISC)
-                    .size(0.25F, 0.25F).trackingRange(4).func_233608_b_(10).build(Registries.MODID + ":" + Registries.GEODE);
+                    .size(0.25F, 0.25F).trackingRange(4).updateInterval(10).build(Registries.MODID + ":" + Registries.GEODE);
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {

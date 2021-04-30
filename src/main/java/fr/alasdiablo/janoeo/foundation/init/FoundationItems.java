@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 
 public class FoundationItems {
 
-    public static Item GEODE_ITEM = new GeodeItem(new Item.Properties().group(JanoeoGroup.ORE_ITEMS).maxStackSize(16)).setRegistryName(Registries.GEODE);
+    public static Item GEODE_ITEM = new GeodeItem(new Item.Properties().group(JanoeoGroup.ORE_ITEMS).maxStackSize(512)).setRegistryName(Registries.GEODE);
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
